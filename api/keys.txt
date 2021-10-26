@@ -1,0 +1,3 @@
+random : 'https://api.adviceslip.com/advice'
+
+advice by search query : 'https://api.adviceslip.com/advice/search/{query}'
