@@ -74,11 +74,11 @@ const InputSection = () => {
 
     return (
         <div className="whole-input-section">
-            <h1 className="text-danger mt-4">Uncle Advice</h1>
+            <h1 className="text-warning mt-4">Uncle Advice</h1>
             <input className="form-control form-control-lg input-box" type="text" placeholder="Advice Search" aria-label=".form-control-lg example" value={inputBoxValue} onChange={(e) => changeInputBoxValue(e)} />
             <div className="buttons-group">
-                <button type="button" className="btn btn-success button" onClick={onSearchAdviceClick}>Search</button>
-                <button type="button" className="btn btn-warning button" onClick={onRandomAdviceClick}>Random</button>
+                <button type="button" className="btn btn-success button text-warning" onClick={onSearchAdviceClick}>Search</button>
+                <button type="button" className="btn btn-warning button text-success" onClick={onRandomAdviceClick}>Random</button>
             </div>
         </div>
     )

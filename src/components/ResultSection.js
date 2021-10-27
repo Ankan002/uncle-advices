@@ -1,4 +1,5 @@
 import React from 'react'
+import './ResultSection.css'
 import { useRecoilState } from 'recoil'
 import { searchResultState } from '../atoms/searchResultAtom'
 import { loadingState } from '../atoms/loadingAtom'
@@ -10,7 +11,7 @@ const ResultSection = () => {
     const [isLoading, setIsLoading] = useRecoilState(loadingState)
 
     return (
-        <div>
+        <div className="result-section">
             {
                 isLoading ? (
                     <Loading />
@@ -18,7 +19,9 @@ const ResultSection = () => {
                     <>
                     {
                         searchResults.map(({id, advice}) => (
-                            <h3 key={id}>{advice}</h3>
+                            <div className="result-div bg-success">
+                                <h4 key={id} className="text-warning">{advice}</h4>
+                            </div>
                         ))
                     }
                     </> 
